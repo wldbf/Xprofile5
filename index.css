@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'BMJUA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family:'DNFBitBitv2';
+    font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    /* 카드 배경색 바꾸기 */
+    --BgColor: #ECFCD9;
+
+    /* 버튼색 바꾸기 */
+    --BtnColor: #acf087;
+
+    /* 이미지 테두리색 바꾸기 */
+    --imgBorderColor: #70ad25;
+
+    /* 텍스트(닉네임, 자기소개) 색 바꾸기  */
+    --textColor: #000;
+
+    /* 버튼 텍스트 색 바꾸기 */
+    --BtnTextColor: #000;
+}
+
+.smallText{
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+    margin-left: 5px;
+    font-size: 0.7em;
+}
+
+/* 프로필카드 */
+.profile_card{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    width: 280px;
+    height: 80vh;
+
+    border-radius: 15px;
+
+    box-shadow: 0 0 5px #00000080;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    background: var(--BgColor);
+
+    transform: translate(calc(-50% - 120%), -50%);
+    transition: 0.5s;
+
+    color: var(--textColor);
+}
+
+.profile_card.show{
+    transform: translate(-50%, -50%);
+}
+
+.profile_card img{
+    width: 150px;
+    height: 150px;
+
+    border-radius: 15px;
+
+
+    box-shadow: 0 0 3px var(--imgBorderColor);
+}
+
+.profile_card h1{
+    width: 100%;
+    
+    letter-spacing: 3px;
+
+    font-family: 'BMJUA';
+
+    text-align: center;
+}
+
+/* 자기소개 카드 */
+.intro_card{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(70%, -50%);
+
+    width: 280px;
+    height: 80vh;
+
+    padding: 20px;
+    border-radius: 15px;
+
+    box-shadow: 0 0 5px #00000080;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+
+    background: var(--BgColor);
+
+    transition: 0.5s;
+
+    font-family: 'BMJUA';
+
+    color: var(--textColor);
+}
+
+.intro_card.show{
+    transform: translate(-50%, -50%);
+}
+
+.intro_card .userID{
+    position: absolute;
+    left: 30px;
+    top: 70px;
+
+    font-size: 1.8em;
+}
+
+.intro_card>div{
+    margin: 10px;
+
+    font-size: 1.2em;
+}
+
+.intro_card .otherSite{
+    position: absolute;
+    left: 10%;
+    bottom: 30px;
+    display: block;
+
+    width: 80%;
+    height: 10%;
+
+    box-shadow: 0 0 3px #00000080;
+
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    background: var(--BtnColor);
+
+    color: var(--BtnTextColor);
+
+    font-family:'DNFBitBitv2';
+}
+
+
+@media screen and (max-width:290px) {
+    .profile_card, .intro_card{
+        width: 230px;
+    }
+
+    .intro_card .userID{
+        font-size: 1em;
+    }
+
+    .intro_card>div{
+        font-size: 1em;
+    }
+}
