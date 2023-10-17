@@ -7,9 +7,7 @@
 
 @font-face{
     font-family:'DNFBitBitv2';
-    font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')
-}
-
+    font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
 
 *{
     margin: 0;
@@ -24,13 +22,13 @@ body{
     min-height: 100vh;
 
     /* 카드 배경색 바꾸기 */
-    --BgColor: #ff9dab;
+    --BgColor: #fff5f7;
 
     /* 버튼색 바꾸기 */
-    --BtnColor: #f57e8f;
+    --BtnColor: #ffafba;
 
     /* 이미지 테두리색 바꾸기 */
-    --imgBorderColor: #a73a4b;
+    --imgBorderColor: #ff637c;
 
     /* 텍스트(닉네임, 자기소개) 색 바꾸기  */
     --textColor: #000;
@@ -45,7 +43,7 @@ body{
 
     transform: translateY(-50%);
     margin-left: 5px;
-    font-size: 0.7em;
+    font-size: 0.9em;
 }
 
 /* 프로필카드 */
@@ -143,7 +141,7 @@ body{
 }
 
 .intro_card>div{
-    margin: 10px;
+    margin: 8px;
 
     font-size: 1.2em;
 }
@@ -151,7 +149,7 @@ body{
 .intro_card .otherSite{
     position: absolute;
     left: 10%;
-    bottom: 30px;
+    bottom: 10px;
     display: block;
 
     width: 80%;
@@ -173,6 +171,30 @@ body{
     font-family:'DNFBitBitv2';
 }
 
+.intro_card .otherSite2{
+    position: absolute;
+    left: 10%;
+    bottom: 80px;
+    display: block;
+
+    width: 80%;
+    height: 10%;
+
+    box-shadow: 0 0 3px #00000080;
+
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    background: var(--BtnColor);
+
+    color: var(--BtnTextColor);
+
+    font-family:'DNFBitBitv2';
+}
 
 @media screen and (max-width:290px) {
     .profile_card, .intro_card{
